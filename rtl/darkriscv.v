@@ -481,7 +481,7 @@ module darkriscv
     // RM-group of instructions (OPCODEs==7'b0010011/7'b0110011), merged! src=immediate(M)/register(R)
 
     wire signed [31:0] S2REGX = XMCC ? SIMM : S2REG;
-    wire        [31:0] U2REGX = XMCC ? UIMM : U2REG;
+    wire        [31:0] U2REGX = XMCC ? SIMM : U2REG;
 
     wire [31:0] RMDATA = FCT3==7 ? U1REG&S2REGX :
                          FCT3==6 ? U1REG|S2REGX :
